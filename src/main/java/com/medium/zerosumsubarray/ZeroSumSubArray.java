@@ -5,7 +5,6 @@ import java.util.HashSet;
 public class ZeroSumSubArray {
 
 
-
     public boolean zeroSumSubarray(int[] nums) {
         /*
           [-5, -5, 2, 3, -2]
@@ -18,6 +17,7 @@ public class ZeroSumSubArray {
         */
         HashSet<Integer> tracker = new HashSet<>();
         int sum = 0;
+        tracker.add(sum);
         for (int num : nums) {
             sum += num;
             if (tracker.contains(sum))
