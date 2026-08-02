@@ -30,4 +30,20 @@ public class ThreeNumberSortTest {
         int[] expected = {1, 1, 1, 1, 1, -1, -1, -1};
         assertThat(tns.threeNumberSort(input, order)).isEqualTo(expected);
     }
+
+    @Test
+    void threeNumberSortDijkstraTest() {
+        int[] input = {1, 3, 3, -1, -1, 3, 1, 1};
+        int[] order = {3, 1, -1};
+        int[] expected = {3, 3, 3, 1, 1, 1, -1, -1};
+        assertThat(tns.threeNumberSortDijkstra(input, order)).isEqualTo(expected);
+    }
+
+    @Test
+    void threeNumberSortDijkstraTestWithTwoNumbers() {
+        int[] input = {1, -1, 1, -1, -1, 1, 1, 1};
+        int[] order = {1, 3, -1};
+        int[] expected = {1, 1, 1, 1, 1, -1, -1, -1};
+        assertThat(tns.threeNumberSortDijkstra(input, order)).isEqualTo(expected);
+    }
 }

@@ -22,4 +22,35 @@ public class ThreeNumberSort {
 
         return arr;
     }
+
+    public int[] threeNumberSortDijkstra(int[] arr, int[] order) {
+        int firstValue = order[0];
+        int secondValue = order[1];
+
+        int firstIdx = 0;
+        int secondIdx = 0;
+        int thirdIdx = arr.length - 1;
+
+        while (secondIdx <= thirdIdx) {
+            int value = arr[secondIdx];
+            if (value == firstValue) {
+                swap(firstIdx, secondIdx, arr);
+                firstIdx++;
+                secondIdx++;
+            } else if (value == secondValue) {
+                secondIdx++;
+            } else {
+                swap(secondIdx, thirdIdx, arr);
+                thirdIdx--;
+            }
+        }
+
+        return arr;
+    }
+
+    private void swap(int i, int j, int[] arr) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }
