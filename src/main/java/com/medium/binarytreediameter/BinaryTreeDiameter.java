@@ -29,9 +29,9 @@ public class BinaryTreeDiameter {
         TreeInfo left = diameterTreeInfo(node.left);
         TreeInfo right = diameterTreeInfo(node.right);
 
-        int longestPath = left.height + right.height;
-        int maxDiameter = Math.max(left.diameter, right.diameter);
-        int currentDiameter = Math.max(longestPath, maxDiameter);
+        int longestPathThroughThisNode = left.height + right.height;
+        int maxDiameterSoFar = Math.max(left.diameter, right.diameter);
+        int currentDiameter = Math.max(longestPathThroughThisNode, maxDiameterSoFar);
         int currentHeight = Math.max(left.height, right.height) + 1;
 
         return new TreeInfo(currentDiameter, currentHeight);
