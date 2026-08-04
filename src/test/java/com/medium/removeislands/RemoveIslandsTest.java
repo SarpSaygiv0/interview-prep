@@ -1,17 +1,17 @@
-package com.medium.riversizes;
+package com.medium.removeislands;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class RiverSizesTest {
+public class RemoveIslandsTest {
 
-    RiverSizes rs;
+    RemoveIslands rs;
 
     @BeforeEach
     void setRs() {
-        rs = new RiverSizes();
+        rs = new RemoveIslands();
     }
 
     @Test

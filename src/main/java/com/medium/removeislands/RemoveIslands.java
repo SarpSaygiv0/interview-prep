@@ -1,6 +1,6 @@
-package com.medium.riversizes;
+package com.medium.removeislands;
 
-public class RiverSizes {
+public class RemoveIslands {
 
     public int[][] removeIslands(int[][] matrix) {
 
